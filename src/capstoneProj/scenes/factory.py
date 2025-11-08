@@ -3,7 +3,7 @@ from typing import TYPE_CHECKING
 
 from capstoneProj.scenes.battle.battle_scene import BattleScene
 from capstoneProj.scenes.game_over.game_over_scene import GameOverScene
-from capstoneProj.scenes.hero_creation.hero_creation_scene import HeroCreationScene
+from capstoneProj.scenes.hero_creation.hero_creation_scene import CharacterCreationScene
 from capstoneProj.scenes.main_menu.main_menu_scene import MainMenuScene
 from capstoneProj.scenes.resting_hub.resting_hub_scene import RestingHubScene
 from capstoneProj.scenes.scene import Scene
@@ -38,8 +38,8 @@ class SceneFactory:
     def get_resting_hub_scene(self) -> RestingHubScene:
         return RestingHubScene(game=self.game)
 
-    def get_hero_creation_scene(self) -> HeroCreationScene:
-        return HeroCreationScene(game=self.game)
+    def get_hero_creation_scene(self) -> CharacterCreationScene:
+        return CharacterCreationScene(game=self.game)
 
     def get_game_over_scene(self) -> GameOverScene:
         return GameOverScene(game=self.game)

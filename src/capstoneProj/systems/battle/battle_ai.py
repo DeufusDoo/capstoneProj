@@ -6,7 +6,7 @@ from typing import Annotated
 
 from capstoneProj.objects.item import Item
 from capstoneProj.systems.battle.enemy import Enemy
-from capstoneProj.systems.hero.hero import Hero
+from capstoneProj.systems.hero.hero import Character
 
 
 class ActionEffect(BaseModel):
@@ -50,7 +50,7 @@ class BattleAI:
 
     def _get_battle_ai_prompt(
         self,
-        hero: Hero,
+        hero: Character,
         enemy: Enemy,
         is_hero_attacker: bool,
         battle_log_string: str,
@@ -82,7 +82,7 @@ class BattleAI:
     def determine_action_effect(
         self,
         proposed_action_attacker: str,
-        hero: Hero,
+        hero: Character,
         enemy: Enemy,
         is_hero_attacker: bool,
         battle_log_string: str,

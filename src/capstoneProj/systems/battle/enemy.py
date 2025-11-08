@@ -2,7 +2,7 @@ from enum import Enum
 
 from capstoneProj.llm.llm import LLM
 from capstoneProj.objects.character import Character, Stats
-from capstoneProj.systems.hero.hero import Hero
+from capstoneProj.systems.hero.hero import Character
 from capstoneProj.systems.battle.battle_log import BattleLog
 
 
@@ -35,7 +35,7 @@ class Enemy(Character):
     def get_current_stats(self) -> Stats:
         return self.base_stats
 
-    def get_next_action(self, battle_log: BattleLog, hero: Hero):
+    def get_next_action(self, battle_log: BattleLog, hero: Character):
         battle_log_string = battle_log.to_string_for_battle_ai()
 
         prompt = self.enemy_next_action_prompt.format(

@@ -2,7 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from capstoneProj.scenes.hero_creation.hero_creation_states.hero_creation_states import (
-    HeroCreationStates,
+    CharacterCreationStates,
 )
 from capstoneProj.scenes.state import State
 
@@ -11,7 +11,7 @@ from typing import TYPE_CHECKING
 from capstoneProj.utils.rendering import render_state_transition_header
 
 if TYPE_CHECKING:
-    from capstoneProj.scenes.hero_creation.hero_creation_scene import HeroCreationScene
+    from capstoneProj.scenes.hero_creation.hero_creation_scene import CharacterCreationScene
 
 
 @dataclass
@@ -20,8 +20,8 @@ class ChosenName:
     is_valid: bool
 
 
-class HeroCreationChooseNameState(State):
-    def __init__(self, scene: HeroCreationScene):
+class CharacterCreationChooseNameState(State):
+    def __init__(self, scene: CharacterCreationScene):
         self.scene = scene
         self.display_state_transition_header = True
         self.display_name_prompt = True
@@ -41,7 +41,7 @@ class HeroCreationChooseNameState(State):
         self.display_state_transition_header = False
         if self.chosen_name and self.chosen_name.is_valid:
             self.scene.game.hero.name = self.chosen_name.name
-            self.scene.change_state(HeroCreationStates.CHOOSE_CLASS)
+            self.scene.change_state(CharacterCreationStates.CHOOSE_CLASS)
 
     def _ask_for_name(self):
         print("Please enter a name for your character (max 10 characters):")

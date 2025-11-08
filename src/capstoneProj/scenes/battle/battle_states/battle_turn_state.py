@@ -1,7 +1,7 @@
 from __future__ import annotations
 from capstoneProj.scenes.battle.battle_states.battle_states import BattleStates
 from capstoneProj.systems.battle.damage_calculator import DamageCalculationResult
-from capstoneProj.systems.hero.hero import ProposedHeroAction
+from capstoneProj.systems.hero.hero import ProposedCharacterAction
 from capstoneProj.systems.battle.battle_log import BattleEvent
 
 from typing import TYPE_CHECKING
@@ -17,7 +17,7 @@ class BattleTurnState(State):
     def __init__(self, battle_scene: BattleScene):
         self.battle_scene = battle_scene
         self.is_hero_input_valid = True
-        self.proposed_hero_action: ProposedHeroAction = None
+        self.proposed_hero_action: ProposedCharacterAction = None
         self.display_state_transition_header = True
 
     def handle_input(self):

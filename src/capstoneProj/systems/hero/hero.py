@@ -8,7 +8,7 @@ from capstoneProj.utils.timer import Timer
 
 
 @dataclass
-class ProposedHeroAction:
+class ProposedCharacterAction:
     action: str
     time_to_answer_seconds: float
     is_valid: bool
@@ -16,14 +16,14 @@ class ProposedHeroAction:
 
 
 @dataclass
-class HeroClass:
+class CharacterClass:
     class_name: str
     description: str
     base_stats: Stats
     starting_item: Item
 
 
-class Hero(Character):
+class Character(Character):
     def __init__(
         self,
         name: str,
@@ -69,19 +69,19 @@ class Hero(Character):
             base_stats.max_hp = item.boost_max_hp(base_stats.max_hp)
         return base_stats
 
-    def get_next_action(self) -> ProposedHeroAction:
+    def get_next_action(self) -> ProposedCharacterAction:
         with Timer() as timer:
             proposed_input = input()
         n_chars = len(proposed_input.replace(" ", ""))
         if len(proposed_input) == 0:
-            return ProposedHeroAction(
+            return ProposedCharacterAction(
                 action="Decided to do nothing this turn.",
                 is_valid=True,
                 # I don't want to give the user an answers speed bonus for doing nothing
                 time_to_answer_seconds=100,
             )
         if n_chars > self.get_current_stats().focus:
-            return ProposedHeroAction(
+            return ProposedCharacterAction(
                 action="",
                 is_valid=False,
                 time_to_answer_seconds=timer.interval,
@@ -89,7 +89,7 @@ class Hero(Character):
                 f"{self.get_current_stats().focus} characters. You typed {n_chars} non-whitespace characters. Try again.",
             )
         else:
-            return ProposedHeroAction(
+            return ProposedCharacterAction(
                 action=proposed_input,
                 is_valid=True,
                 time_to_answer_seconds=timer.interval,

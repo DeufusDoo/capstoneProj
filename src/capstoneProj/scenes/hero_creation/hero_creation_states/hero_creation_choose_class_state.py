@@ -12,11 +12,11 @@ from capstoneProj.utils.user_navigation_input import (
 )
 
 if TYPE_CHECKING:
-    from capstoneProj.scenes.hero_creation.hero_creation_scene import HeroCreationScene
+    from capstoneProj.scenes.hero_creation.hero_creation_scene import CharacterCreationScene
 
 
-class HeroCreationChooseClassState(State):
-    def __init__(self, scene: HeroCreationScene):
+class CharacterCreationChooseClassState(State):
+    def __init__(self, scene: CharacterCreationScene):
         self.scene = scene
         self.display_state_transition_header = True
         self.display_classes = True

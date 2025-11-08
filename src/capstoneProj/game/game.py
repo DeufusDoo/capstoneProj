@@ -1,7 +1,7 @@
 from __future__ import annotations
 from capstoneProj.game.game_config import RPGConfig
 from capstoneProj.scenes.factory import SceneFactory
-from capstoneProj.systems.hero.hero import Hero
+from capstoneProj.systems.hero.hero import Character
 
 from typing import TYPE_CHECKING
 from capstoneProj.scenes.scene import SceneTypes
@@ -15,7 +15,7 @@ class RPGGame:
         self.config = config
         self.llm = config.llm
         self.is_running = True
-        self.hero = Hero(
+        self.hero = Character(
             name="",
             class_name="",
             description="",

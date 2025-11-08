@@ -13,7 +13,7 @@ from capstoneProj.systems.battle.enemy_scaling import (
     LevelScaling,
     LevelingAttributeProbs,
 )
-from capstoneProj.systems.hero.hero import HeroClass
+from capstoneProj.systems.hero.hero import CharacterClass
 from capstoneProj.llm.llm import LLM, OllamaLLM, GroqLLM
 from capstoneProj.llm.llm_cost_tracker import LLMCostTracker
 
@@ -60,8 +60,8 @@ class RPGConfig:
         )
 
     @cached_property
-    def attack_hero_class(self) -> HeroClass:
-        return HeroClass(
+    def attack_hero_class(self) -> CharacterClass:
+        return CharacterClass(
             class_name=self.game_config["hero"]["classes"]["attack"]["class_name"],
             description=self.game_config["hero"]["classes"]["attack"]["description"],
             base_stats=self._parse_stats(
@@ -71,8 +71,8 @@ class RPGConfig:
         )
 
     @cached_property
-    def focus_hero_class(self) -> HeroClass:
-        return HeroClass(
+    def focus_hero_class(self) -> CharacterClass:
+        return CharacterClass(
             class_name=self.game_config["hero"]["classes"]["focus"]["class_name"],
             description=self.game_config["hero"]["classes"]["focus"]["description"],
             base_stats=self._parse_stats(
@@ -82,8 +82,8 @@ class RPGConfig:
         )
 
     @cached_property
-    def defense_hero_class(self) -> HeroClass:
-        return HeroClass(
+    def defense_hero_class(self) -> CharacterClass:
+        return CharacterClass(
             class_name=self.game_config["hero"]["classes"]["defense"]["class_name"],
             description=self.game_config["hero"]["classes"]["defense"]["description"],
             base_stats=self._parse_stats(

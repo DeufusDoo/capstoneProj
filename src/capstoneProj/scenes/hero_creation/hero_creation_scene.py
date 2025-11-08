@@ -3,13 +3,13 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from capstoneProj.scenes.hero_creation.hero_creation_states.hero_creation_choose_class_state import (
-    HeroCreationChooseClassState,
+    CharacterCreationChooseClassState,
 )
 from capstoneProj.scenes.hero_creation.hero_creation_states.hero_creation_choose_name_state import (
-    HeroCreationChooseNameState,
+    CharacterCreationChooseNameState,
 )
 from capstoneProj.scenes.hero_creation.hero_creation_states.hero_creation_states import (
-    HeroCreationStates,
+    CharacterCreationStates,
 )
 from capstoneProj.scenes.scene import Scene
 
@@ -18,15 +18,15 @@ if TYPE_CHECKING:
     from capstoneProj.game.game import Game
 
 
-class HeroCreationScene(Scene):
+class CharacterCreationScene(Scene):
     def __init__(self, game: Game):
         super().__init__(game=game)
-        self.current_state = HeroCreationChooseNameState(self)
+        self.current_state = CharacterCreationChooseNameState(self)
 
-    def change_state(self, new_state: HeroCreationStates):
-        if new_state == HeroCreationStates.CHOOSE_CLASS:
-            self.current_state = HeroCreationChooseClassState(self)
-        elif new_state == HeroCreationStates.CHOOSE_NAME:
-            self.current_state = HeroCreationChooseNameState(self)
+    def change_state(self, new_state: CharacterCreationStates):
+        if new_state == CharacterCreationStates.CHOOSE_CLASS:
+            self.current_state = CharacterCreationChooseClassState(self)
+        elif new_state == CharacterCreationStates.CHOOSE_NAME:
+            self.current_state = CharacterCreationChooseNameState(self)
         else:
             raise ValueError(f"Invalid state: {new_state}")
