@@ -1,6 +1,6 @@
 # capstoneProj
 
-capstoneProj is a role-playing game project that leverages large language models (LLMs) to create dynamic gameplay experiences. This fork currently supports character creation and a battle system, and includes modifications from the original LLM-RPG project, such as renaming "Hero" to "Character."
+capstoneProj is a role-playing game project that leverages large language models (LLMs) to create dynamic gameplay experiences. This project currently supports character creation and a battle system.
 
 ## Current / Future Features
 
