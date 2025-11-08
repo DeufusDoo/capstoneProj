@@ -47,7 +47,7 @@ You can get a Groq API key from [here](https://groq.com/). This gives you free t
 To start the game, run the following command:
 
 ```bash
-poetry run python -m llm_rpg
+poetry run python -m capstoneProj
 ```
 
 ## Local LLMs with ollama
@@ -74,7 +74,7 @@ llm:
 5. Run the game
 
 ```bash
-poetry run python -m llm_rpg
+poetry run python -m capstoneProj
 ```
 
 ## Maintaining the codebase

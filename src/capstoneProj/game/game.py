@@ -1,0 +1,52 @@
+from __future__ import annotations
+from capstoneProj.game.game_config import RPGConfig
+from capstoneProj.scenes.factory import SceneFactory
+from capstoneProj.systems.hero.hero import Hero
+
+from typing import TYPE_CHECKING
+from capstoneProj.scenes.scene import SceneTypes
+
+if TYPE_CHECKING:
+    from capstoneProj.scenes.scene import Scene
+
+
+class RPGGame:
+    def __init__(self, config: GameConfig):
+        self.config = config
+        self.llm = config.llm
+        self.is_running = True
+        self.hero = Hero(
+            name="",
+            class_name="",
+            description="",
+            level=1,
+            base_stats=self.config.hero_base_stats,
+            max_items=self.config.hero_max_items,
+        )
+        self.scene_factory = SceneFactory(self)
+        self.current_scene: Scene = self.scene_factory.get_initial_scene()
+        self.battles_won = 0
+
+    def change_scene(self, scene_type: SceneTypes):
+        if scene_type == SceneTypes.BATTLE:
+            self.current_scene = self.scene_factory.get_battle_scene()
+        elif scene_type == SceneTypes.RESTING_HUB:
+            self.current_scene = self.scene_factory.get_resting_hub_scene()
+        elif scene_type == SceneTypes.HERO_CREATION:
+            self.current_scene = self.scene_factory.get_hero_creation_scene()
+        elif scene_type == SceneTypes.GAME_OVER:
+            self.current_scene = self.scene_factory.get_game_over_scene()
+        elif scene_type == SceneTypes.MAIN_MENU:
+            self.current_scene = self.scene_factory.get_main_menu_scene()
+        else:
+            raise ValueError(f"Tried to change to invalid scene: {scene_type}")
+
+    def run(self):
+        # print initial scene
+        self.current_scene.render()
+        while self.is_running:
+            self.current_scene.handle_input()
+            self.current_scene.update()
+            self.current_scene.render()
+
+        print(f"Total llm cost $: {self.llm.llm_cost_tracker.total_cost}")
