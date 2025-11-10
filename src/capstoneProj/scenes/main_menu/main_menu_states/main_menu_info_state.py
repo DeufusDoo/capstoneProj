@@ -38,16 +38,13 @@ class MainMenuInfoState(State):
         print(
             dedent(
                 """
-            You choose a character class and fight against increasingly difficult enemies.
-            You can freely type your actions and an LLM will judge the consequences.
-            LLM will judge your action based on the battle situation, your character class, and your items.
-            LLM will output: feasibility of action and potential damage.
+            Select a character class and face a series of tougher enemies. You type your actions freely, and a Large Language Model (LLM) will decide what happens. The LLM considers your character's class, items, and the battle contex, and then calculates how feasible your action is (how realistic in world) as well as the potential damage.
 
-            Besides LLM-based damage, your character has the following attributes:
-            - Attack: influences damage dealt to enemies
-            - Defense: influences damage taken from enemies
-            - HP: how much damage you can take
-            - Focus: How many characters you can type in each turn
+            Your character also has core attributes:
+            - Attack: determines the damage you inflict
+            - Defense: reduces the damage you take
+            - HP: how much damage you can endure
+            - Focus: controls how many letter you can type per turn
 
             Choose an option:
             [1] Back to main menu

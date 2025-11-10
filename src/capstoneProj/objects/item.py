@@ -151,8 +151,8 @@ class DefenderStartingItem(Item):
 class FocusStartingItem(Item):
     def __init__(self):
         super().__init__(
-            name="Lots of Paper",
-            description="Standard paper to write on nothing too impressive. Increases focus by 5.",
+            name="Enchanted Pen",
+            description="Magic Pen, duh. Increases focus by 5.",
             item_type=ItemType.ACCESSORY,
             rarity=Rarity.COMMON,
         )

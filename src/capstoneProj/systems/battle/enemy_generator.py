@@ -19,115 +19,195 @@ rat = BaseEnemyInfo(
     name="Rat",
     description="A small, scurrying rodent with sharp teeth and a quick bite",
     archetype=EnemyArchetypes.ATTACKER,
-    ascii_render="""
-(\__/)
-(o'.'o)
-(")_(")
+    ascii_render= r"""
+   (\_/)
+   (o o)
+   /\./\
+  ( )"( )
+  /\| |/\   )
+ (  " "  ) /
+  \ /~\ /\(_
+   \| |/  \_)
+   "   "  
 """,
 )
 
-mall_cop = BaseEnemyInfo(
-    name="Mall Cop",
-    description="Overweight mall cop on a segway, looking for trouble.",
+system_error = BaseEnemyInfo(
+    name="SYSTEM ERROR",
+    description="Rouge AI born from a failed defense protocol",
     archetype=EnemyArchetypes.TANK,
-    ascii_render="""
-      (o_o)
-     ⎛( - )⎞
-     /(---)\
-      || ||
-    _/     \_
-   (_______)
-    O     O
+    ascii_render= r"""
+                  ,--.    ,--.
+                 ((O ))--((O ))
+               ,'_`--'____`--'_`.
+              _:  ____________  :_
+             | | ||::::::::::|| | |
+             | | ||::::::::::|| | |
+             | | ||::::::::::|| | |
+             |_| |/__________\| |_|
+               |________________|
+            __..-'            `-..__
+         .-| : .----------------. : |-.
+       ,\ || | |\______________/| | || /.
+      /`.\:| | ||  __  __  __  || | |;/,'\
+     :`-._\;.| || '--''--''--' || |,:/_.-':
+     |    :  | || .----------. || |  :    |
+     |    |  | || '----SSt---' || |  |    |
+     |    |  | ||   _   _   _  || |  |    |
+     :,--.;  | ||  (_) (_) (_) || |  :,--.;
+     (`-'|)  | ||______________|| |  (|`-')
+      `--'   | |/______________\| |   `--'
+             |____________________|
+              `.________________,'
+               (_______)(_______)
+               (_______)(_______)
+               (_______)(_______)
+               (_______)(_______)
+              |        ||        |
+              '--------''--------'
 """,
 )
 
-angry_bus = BaseEnemyInfo(
-    name="Angry Bus",
-    description="A bus which gained sentience and is now angry",
+haunted_vroom_vroom = BaseEnemyInfo(
+    name="Haunted Vroom Vroom",
+    description="No driver. No mercy. Just engine",
     archetype=EnemyArchetypes.TANK,
-    ascii_render="""
-        __
- ______|_|_____
-||  [__]  [__]  |
-||__[__]__[__]__|
-  o-o       o-o
+    ascii_render= r"""
+                                    _..-------++._
+                             _.-'/ |      _||  \"--._
+                       __.--'`._/_\j_____/_||___\    `----.
+                  _.--'_____    |          \     _____    /
+                _j    /,---.\   |        =o |   /,---.\   |_
+               [__]==// .-. \\==`===========/==// .-. \\=[__]
+                 `-._|\ `-' /|___\_________/___|\ `-' /|_.'     
+                       `---'                     `---'
     """,
 )
 
 
-bear = BaseEnemyInfo(
-    name="Bear",
-    description="A large, lumbering bear with sharp claws and a powerful roar",
+ursa = BaseEnemyInfo(
+    name="Ursa",
+    description="Apex predator build in a lab to end you",
     archetype=EnemyArchetypes.DEFENDER,
-    ascii_render="""
-    (()__(())
-    /       \   
-( /    \  \  
-    \ o o    /  
-    (_()_)__/ \  
-/  _.-' /    
-/_/     /  
+    ascii_render= r"""
+    
+ .'"'.        ___,,,___        .'``.
+: (\  `."'"```         ```"'"-'  /) ;
+ :  \                         `./  .'
+  `.                            :.'
+    /        _         _        \
+   |         0}       {0         |
+   |         /         \         |
+   |        /           \        |
+   |       /             \       |
+    \     |      .-.      |     /
+     `.   | . . /   \ . . |   .'
+       `-._\.'.(     ).'./_.-'
+           `\'  `._.'  '/'
+             `. --'-- .'
+               `-...-'
 """,
 )
 
 
-robert = BaseEnemyInfo(
-    name="Robert",
-    description="A robot which can shoot laser from it's eyes",
+mek = BaseEnemyInfo(
+    name="Mek",
+    description="Just a huge mech",
     archetype=EnemyArchetypes.DEFENDER,
-    ascii_render="""
-        ,     ,
-       (\____/)
-        (_oo_)
-          (O)
-       __||__||__
-   []/          \[]
-   / \          / \
-    /   \________/   \
-    (____)        (____)
+    ascii_render= r"""
+             //                                               \\
+           /'/                                                 \`\
+         [\_/                                                   \_/]
+         I  |..,                                             ...|  I
+         [__]-~                                               ~-[__]
+         || H                                                   H ||
+         || ||                    _________                    || ||
+         ||  ||                  /  _   _  \                  ||  ||
+         ||  ||                 | |(_) (_)| |                 ||  ||
+          L| /\                 | |__   __| |                 /\ L|
+ _________|/'_ \________________|___]___[___|________________/ _`\|_________
+          | (_) |------[ ______               ______ ]------| (_) |
+ ---...___I     `\______\ ._ ```---.__ __.---''' _. /______/'     I___...---
+          ~~~~----'~~~~/_\  ^\_       ~       _/^  /_\~~~~`----~~~~
+                           \  ~-.           .-~  /
+                          /_\    \         /    /_\
+                              \    \     /    /
+                             /_\     \_/     /_\
+                                \___________/
+                                / /       \ \
+                              /' /         \ `\
+                            /'  /           \  `\
+                        __/____/__         __\____\__
+                        \  (_)  /           \  (_)  /
+                         |\   /               \   /|
+                         ||\/||               ||\/||
+                         ||  ||               ||  ||
+                         ||  ||               ||  ||
+                         |H  H|               |H  H|
+                      .---H--H---.         .---H--H---.
+                     /^\__|__|__/^\       /^\__|__|__/^\
+                     |/'   \/   `\|       |/'   \/   `\|       
+
     """,
 )
 
-wellfed_zombie = BaseEnemyInfo(
-    name="Wellfed Zombie",
-    description="Zombie with an insatiable appetite",
+the_hollow_man = BaseEnemyInfo(
+    name="The Hollow Man",
+    description="Skeleton wanting destruction",
     archetype=EnemyArchetypes.TANK,
-    ascii_render="""
-         ______
-       /      \
-      |         | 
-      |  ()  () | 
-      |    ∩    | 
-       \  ---  /  
-      /|  |  | |\
-     / |       | \
-    /  |  ᕕ( ᐛ )ᕗ  | \
-   |   |       |   |
-   |   |       |   |
-   |   \_______/   |
-   |               |
-   \_____/ \_____/
-    (_/       \_)
+    ascii_render= r"""
+                  .7
+                .'/
+               / /
+              / /
+             / /
+            / /
+           / /
+          / /
+         / /         
+        / /          
+      __|/
+    ,-\__\
+    |f-"Y\|
+    \()7L/
+     cgD                            __ _
+     |\(                          .'  Y '>,
+      \ \                        / _   _   \
+       \\\                       )(_) (_)(|}
+        \\\                      {  4A   } /
+         \\\                      \uLuJJ/\l
+          \\\                     |3    p)/
+           \\\___ __________      /nnm_n//
+           c7___-__,__-)\,__)(".  \_>-<_/D
+                      //V     \_"-._.__G G_c__.-__<"/ ( \
+                             <"-._>__-,G_.___)\   \7\
+                            ("-.__.| \"<.__.-" )   \ \
+                            |"-.__"\  |"-.__.-".\   \ \
+                            ("-.__"". \"-.__.-".|    \_\
+                            \"-.__""|!|"-.__.-".)     \ \
+                             "-.__""\_|"-.__.-"./      \ l
+                              ".__""|>G>-.__.-">       .--,_
+                                  ""  G,      
 """,
 )
 
-mailbox = BaseEnemyInfo(
-    name="Mailbox",
-    description="A strong metal mailbox which can attack by shooting letters",
+door = BaseEnemyInfo(
+    name="Door",
+    description="It's a door......doOr is it?",
     archetype=EnemyArchetypes.DEFENDER,
-    ascii_render="""
-      _______
-     |       |
-     |  ___  |
-     | [___] |
-     |_______|
-    //     \\
-   //       \\
-  ||         ||
-  ||_________||
-    | |   | |
-    | |   | |
-
+    ascii_render= r"""
+            __________
+           |  __  __  |
+           | |  ||  | |
+           | |  ||  | |
+           | |__||__| |
+           |  __  __()|
+           | |  ||  | |
+           | |  ||  | |
+           | |  ||  | |
+           | |  ||  | |
+           | |__||__| |
+           |__________|
 """,
 )
 
@@ -135,7 +215,7 @@ conspiracy_theorist = BaseEnemyInfo(
     name="Conspiracy Theorist",
     description="Doesn't believe in anything, even in his own mortality",
     archetype=EnemyArchetypes.ATTACKER,
-    ascii_render="""
+    ascii_render= r"""
         .-"      "-.
        /            \
       |              |
@@ -162,7 +242,7 @@ zephyros = BaseEnemyInfo(
     name="Zephyros",
     description="A cunning and ancient dragon with scales that shimmer like the night sky",
     archetype=EnemyArchetypes.ATTACKER,
-    ascii_render="""
+    ascii_render= r"""
                       ___====-_  _-====___
                 _--^^^#####//      \\#####^^^--_
              _-^##########// (    ) \\##########^-_
@@ -184,12 +264,12 @@ zephyros = BaseEnemyInfo(
 
 battles_won_to_enemies_mapping: Dict[int, BaseEnemyInfo] = {
     0: rat,
-    1: mall_cop,
-    2: angry_bus,
-    3: bear,
-    4: robert,
-    5: wellfed_zombie,
-    6: mailbox,
+    1: system_error,
+    2: haunted_vroom_vroom,
+    3: ursa,
+    4: mek,
+    5: the_hollow_man,
+    6: door,
     7: conspiracy_theorist,
     8: zephyros,
 }
