@@ -16,24 +16,24 @@ hero:
   max_items: 3
   classes:
     attack:
-      class_name: "Gym Bro 💪"
-      description: "Good on the offensive, hits hard but thinks less."
+      class_name: "Warrior ⚔️"
+      description: "ATTACK ATTACK ATTACK"
       base_stats:
         attack: 5
         defense: 5
         focus: 10
         max_hp: 10
     focus:
-      class_name: "Awkward Poet 📖"
-      description: "Is able to deal damage by the sheer force of his words and imagination."
+      class_name: "Mage 📖"
+      description: "Use words creatively"
       base_stats:
         attack: 5
         defense: 5
         focus: 10
         max_hp: 10
     defense:
-      class_name: "Doomsday Prepper 🛡️"
-      description: "Survivalist focussed on defending himself and negating damage."
+      class_name: "Defender 🛡️"
+      description: "Block lots of damage"
       base_stats:
         attack: 5
         defense: 5

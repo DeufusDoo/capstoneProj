@@ -36,21 +36,8 @@ class MainMenuNavigationState(State):
                 self.scene.change_state(MainMenuStates.INFO)
 
     def _render_title_screen(self):
-        print(
-            """
-
-
- ▄█        ▄█         ▄▄▄▄███▄▄▄▄           ▄████████    ▄███████▄    ▄██████▄  
-███       ███       ▄██▀▀▀███▀▀▀██▄        ███    ███   ███    ███   ███    ███ 
-███       ███       ███   ███   ███        ███    ███   ███    ███   ███    █▀  
-███       ███       ███   ███   ███       ▄███▄▄▄▄██▀   ███    ███  ▄███        
-███       ███       ███   ███   ███      ▀▀███▀▀▀▀▀   ▀█████████▀  ▀▀███ ████▄  
-███       ███       ███   ███   ███      ▀███████████   ███          ███    ███ 
-███▌    ▄ ███▌    ▄ ███   ███   ███        ███    ███   ███          ███    ███ 
-█████▄▄██ █████▄▄██  ▀█   ███   █▀         ███    ███  ▄████▀        ████████▀  
-▀         ▀                                ███    ███                           
-"""
-        )
+        print("=== CapstoneProj === ")
+        print("by Dylan Montalbo and Michael Gilman ")
         print("Choose an option:")
         print("[1] Start New Game")
         print("[2] Info")

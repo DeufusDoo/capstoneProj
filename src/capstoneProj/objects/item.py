@@ -125,8 +125,8 @@ class Item(ABC):
 class AttackerStartingItem(Item):
     def __init__(self):
         super().__init__(
-            name="Baseball Bat",
-            description="A simple baseball bat. Increases attack by 5.",
+            name="Sword",
+            description="Standard blade nothing too impressive. Increases attack by 5.",
             item_type=ItemType.WEAPON,
             rarity=Rarity.COMMON,
         )
@@ -138,8 +138,8 @@ class AttackerStartingItem(Item):
 class DefenderStartingItem(Item):
     def __init__(self):
         super().__init__(
-            name="Turtle Shell",
-            description="A turtle shell. Increases defense by 5.",
+            name="Shield",
+            description="Standard shield nothing too impressive. Increases defense by 5.",
             item_type=ItemType.ARMOR,
             rarity=Rarity.COMMON,
         )
@@ -151,8 +151,8 @@ class DefenderStartingItem(Item):
 class FocusStartingItem(Item):
     def __init__(self):
         super().__init__(
-            name="Chewed Up Pen",
-            description="A chewed up pen. Increases focus by 5.",
+            name="Lots of Paper",
+            description="Standard paper to write on nothing too impressive. Increases focus by 5.",
             item_type=ItemType.ACCESSORY,
             rarity=Rarity.COMMON,
         )
@@ -165,11 +165,11 @@ class FocusStartingItem(Item):
 
 
 # BASE STAT BOOSTS
-class LaserPistol(Item):
+class Gun(Item):
     def __init__(self):
         super().__init__(
-            name="Laser Pistol",
-            description="A laser pistol. Increases attack by 10.",
+            name="Gun",
+            description="Litterally a gun. Increases attack by 10.",
             item_type=ItemType.WEAPON,
             rarity=Rarity.COMMON,
         )
@@ -300,7 +300,7 @@ class AdrenalinePump(Item):
 
 # Instantiate items
 ALL_ITEMS: List[Item] = [
-    LaserPistol(),
+    Gun(),
     TurtleShell(),
     AdderallBox(),
     HeartTransplant(),

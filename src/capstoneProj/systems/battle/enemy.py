@@ -25,7 +25,12 @@ class Enemy(Character):
         enemy_next_action_prompt: str,
     ):
         super().__init__(
-            name=name, description=description, level=level, base_stats=base_stats
+            name=name, 
+            description=description, 
+            level=level, 
+            base_stats=base_stats, 
+            class_name="Enemy", 
+            max_items=0
         )
         self.llm = llm
         self.archetype = archetype
