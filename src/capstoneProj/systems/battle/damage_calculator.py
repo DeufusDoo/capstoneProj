@@ -136,13 +136,13 @@ class DamageCalculationResult:
     def to_string(self, is_hero_turn: bool):
         base_string = f"💥 Total damage: {self.total_dmg}"
         base_string += f"\n  - feasibility: {self.feasibility}"
-        base_string += f"\n  - potential damage: {self.potential_damage}"
+        #base_string += f"\n  - potential damage: {self.potential_damage}"
         if is_hero_turn:
             if self._applied_feasibility_boosts_string():
                 base_string += f"\n  - {self._applied_feasibility_boosts_string()}"
             if self._applied_potential_damage_boosts_string():
                 base_string += f"\n  - {self._applied_potential_damage_boosts_string()}"
-            base_string += f"\n  - answer speed s: {self.answer_speed_s}"
+            #base_string += f"\n  - answer speed s: {self.answer_speed_s}"
             base_string += f"\n  - n new words in action: {self.n_new_words_in_action}"
             base_string += (
                 f"\n  - n overused words in action: {self.n_overused_words_in_action}"

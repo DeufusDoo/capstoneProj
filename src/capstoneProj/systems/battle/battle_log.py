@@ -40,8 +40,8 @@ class BattleLog:
                 string_repr += (
                     f"{event.proposed_action}\n\n"
                     f"LLM estimates:\n"
-                    f"- feasibility: {event.damage_calculation_result.feasibility}\n"
-                    f"- potential damage: {event.damage_calculation_result.potential_damage}\n\n"
+                    f"- feasibility: {event.damage_calculation_result.feasibility}\n\n"
+                    #f"- potential damage: {event.damage_calculation_result.potential_damage}\n\n"
                     f"Effect:\n"
                     f"{event.effect_description}\n\n"
                     f"{event.damage_calculation_result.to_string_debug(is_hero_turn=event.is_hero_turn)}\n"
@@ -50,8 +50,8 @@ class BattleLog:
                 string_repr += (
                     f"{event.proposed_action}\n\n"
                     f"LLM estimates:\n"
-                    f"- feasibility: {event.damage_calculation_result.feasibility}\n"
-                    f"- potential damage: {event.damage_calculation_result.potential_damage}\n\n"
+                    f"- feasibility: {event.damage_calculation_result.feasibility}\n\n"
+                    #f"- potential damage: {event.damage_calculation_result.potential_damage}\n\n"
                     f"Effect:\n"
                     f"{event.effect_description}\n\n"
                     f"{event.damage_calculation_result.to_string(is_hero_turn=event.is_hero_turn)}\n"
